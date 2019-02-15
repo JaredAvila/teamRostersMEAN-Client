@@ -1,0 +1,18 @@
+#root {
+    padding: 40px;
+    background-color: rgb(235, 212, 190);
+    height: 100vh;
+}
+
+#rootNav nav {
+    padding: 40px;
+    background: rgb(235, 214, 190);
+}
+
+#root nav a {
+    padding: 10px;
+    font-size: 16pt;
+    letter-spacing: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(9, 97, 9);
+}

@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    padding: 5px 15px;
+    box-shadow: 3px 3px 2px black;
+    border: 2px solid black;
+    outline: none;
+    font-weight: bold;
+    transition: all 150ms ease;
+}
+
+.btn:active {
+    box-shadow: none;
+    background: rgb(192, 192, 192);
+}
+
+.btn-red {
+    background: rgb(251, 71, 71);
+    color: white;
+}
+
+.btn-red:active {
+    background: rgb(219, 62, 62);
+}
+
+.btn-green {
+    background: rgb(13, 187, 13);
+    color: white;
+}
+
+.btn-green:active {
+    background: rgb(11, 148, 11);
+}
+
+.btn-yellow {
+    background: rgb(255, 251, 0);
+}
+
+.btn-yellow:active {
+    background: rgb(223, 219, 1);
+}

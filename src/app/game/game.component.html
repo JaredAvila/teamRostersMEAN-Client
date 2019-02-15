@@ -1,0 +1,74 @@
+<div class="list">
+  <table>
+    <tr style="background: grey">
+      <th>Player Name</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let player of players">
+      <td>{{ player["name"] }}</td>
+      <td *ngIf="game === 1">
+        <button
+          class="btn"
+          [ngClass]="{ 'btn-green': player['game1'] === 'play' }"
+          (click)="onPlayClick(player)"
+        >
+          Playing</button
+        ><button
+          class="btn"
+          [ngClass]="{ 'btn-red': player['game1'] === 'not' }"
+          (click)="onNotClick(player)"
+        >
+          Not Playing</button
+        ><button
+          class="btn"
+          [ngClass]="{ 'btn-yellow': player['game1'] === 'un' }"
+          (click)="onUnClick(player)"
+        >
+          Undecided
+        </button>
+      </td>
+      <td *ngIf="game === 2">
+        <button
+          class="btn"
+          [ngClass]="{ 'btn-green': player['game2'] === 'play' }"
+          (click)="onPlayClick(player)"
+        >
+          Playing</button
+        ><button
+          class="btn"
+          [ngClass]="{ 'btn-red': player['game2'] === 'not' }"
+          (click)="onNotClick(player)"
+        >
+          Not Playing</button
+        ><button
+          class="btn"
+          [ngClass]="{ 'btn-yellow': player['game2'] === 'un' }"
+          (click)="onUnClick(player)"
+        >
+          Undecided
+        </button>
+      </td>
+      <td *ngIf="game === 3">
+        <button
+          class="btn"
+          [ngClass]="{ 'btn-green': player['game3'] === 'play' }"
+          (click)="onPlayClick(player)"
+        >
+          Playing</button
+        ><button
+          class="btn"
+          [ngClass]="{ 'btn-red': player['game3'] === 'not' }"
+          (click)="onNotClick(player)"
+        >
+          Not Playing</button
+        ><button
+          class="btn"
+          [ngClass]="{ 'btn-yellow': player['game3'] === 'un' }"
+          (click)="onUnClick(player)"
+        >
+          Undecided
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>

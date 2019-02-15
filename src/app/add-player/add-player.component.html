@@ -1,0 +1,30 @@
+<div class="add">
+  <h1>Add Player</h1>
+  <form>
+    <div class="nameInput">
+      <label for="name">Player Name: </label>
+      <input
+        type="text"
+        name="name"
+        required
+        minlength="2"
+        [(ngModel)]="player['name']"
+        #name="ngModel"
+      />
+    </div>
+    <div class="posInput">
+      <label for="name">Preferred Position: </label>
+      <input type="text" name="pos" [(ngModel)]="player['pos']" />
+    </div>
+    <p class="errorText" *ngIf="error">{{ error }}</p>
+    <button
+      class="btn"
+      type="button"
+      [disabled]="name.invalid"
+      (click)="onAddPlayer()"
+      [ngClass]="{ 'btn-green': name.invalid === false }"
+    >
+      Add
+    </button>
+  </form>
+</div>

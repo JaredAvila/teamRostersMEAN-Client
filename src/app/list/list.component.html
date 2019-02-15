@@ -1,0 +1,30 @@
+<div class="list">
+  <table>
+    <tr style="background: grey">
+      <th>Player Name</th>
+      <th>Prefered Postion</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let player of players">
+      <td>{{ player.name }}</td>
+      <td>{{ player.pos }}</td>
+      <td>
+        <button (click)="onDeleteClick(player)" class="btn btn-red">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="modal" *ngIf="confirm">
+  <p>
+    Are you sure that you want to delete {{ currentPlayer["name"] }}? (this
+    cannot be undone)
+  </p>
+  <button class="btn btn-red" (click)="confirmDelete(currentPlayer['_id'])">
+    Yes, delete player
+  </button>
+  <button class="btn btn-green" (click)="noDelete()">
+    Changed my mind
+  </button>
+</div>

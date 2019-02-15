@@ -1,0 +1,40 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background: white;
+    margin-top: 20px;
+    border: 2px solid rgb(37, 37, 37);
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #b8e0f0;
+}
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    padding: 40px;
+    background: rgb(44, 44, 44);
+    color: white;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 4px 4px 7px rgb(39, 39, 39);
+}
+
+.modal p {
+    padding: 15px;
+    font-size: 18pt;
+}
+
+.modal button {
+    margin: 10px;
+    font-size: 14pt;
+}

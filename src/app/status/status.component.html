@@ -1,0 +1,12 @@
+<div class="container">
+  <nav id="statusNav">
+    <a (click)="changeTheGame(1)">Game 1</a> |
+    <a (click)="changeTheGame(2)">Game 2</a> |
+    <a (click)="changeTheGame(3)">Game 3</a>
+  </nav>
+  <app-game
+    [game]="game"
+    [players]="players"
+    (emitter)="getAllPlayers()"
+  ></app-game>
+</div>
